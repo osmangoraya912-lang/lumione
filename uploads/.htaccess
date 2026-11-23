@@ -1,0 +1,6 @@
+# Block direct web access to uploaded files, and never run PHP from here.
+<FilesMatch "\.(php|php3|php4|php5|phtml|phar|cgi|pl)$">
+    Require all denied
+</FilesMatch>
+Options -ExecCGI
+php_flag engine off
