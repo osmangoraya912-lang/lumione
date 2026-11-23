@@ -21,16 +21,12 @@ no paid APIs. Bootstrap is vendored locally (`assets/vendor/`), so the app has
 Everything is explained inside the app: every page starts with 1–2 lines in very
 easy English explaining what it does and how to use it.
 
-## Real data from minute one
+## Starts empty — zero everything
 
-The installer seeds your **real** data — no fake or sample data anywhere:
-
-- **25 products** — your live Gumroad products (14 goraya244 + 11 mangoraya, with exact prices and real links).
-- **6 links** — your Gumroad stores, WPBay Digishop, Fiverr, YouTube and Portfolio.
-- **4 tasks** — your real daily schedule (20 Gumroad products, 70 Shutterstock images, 70 Dreamstime images, Adobe Stock Payoneer).
-- **2 notes** — your discount-code rules and daily schedule.
-- **2 planned posts** — the M-B01 Messaging Trio posts for Threads + Bluesky.
-- **0 sales** — you have 0 sales so far, and the app says so honestly. Income starts at $0 until a real sale is added.
+The installer creates empty tables only. Fresh install = **0 products,
+0 sales, $0 income, 0 tasks, 0 posts, 0 notes, 0 links**. You add your own
+real data after login — nothing fake, nothing pre-filled, no sample data.
+Income stays at $0 until a real sale is added on the Sales page.
 
 ## Install
 
@@ -76,7 +72,7 @@ The installer seeds your **real** data — no fake or sample data anywhere:
 ```
 config.php            DB settings (rewritten by install.php)
 install.php           Browser installer (delete after install)
-schema.sql            Tables + real seed data
+schema.sql            Tables only — installs empty, no seed data
 index.php             Dashboard
 products.php          Product list      product-form.php   Add/edit product
 sales.php             Sale list         sale-form.php      Add/edit sale
